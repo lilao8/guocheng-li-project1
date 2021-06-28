@@ -1,0 +1,12 @@
+@import "variables";
+@mixin headerFont(){
+    color: $marigold;
+    font-family: $dokdo;
+}
+@mixin fontStyle($lineHeight, $letterSpace){
+    line-height: $lineHeight;
+    letter-spacing: $letterSpace;
+}
+@mixin bodyFont(){
+    font-family: $lato;
+}

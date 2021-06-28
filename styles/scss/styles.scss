@@ -1,0 +1,438 @@
+@import "setup";
+@import "variables";
+@import "mixins";
+
+body {
+  @include bodyFont();
+  font-size: 20px;
+  background-color: #1f0a03;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+.logo {
+  @include headerFont();
+}
+h1 {
+  font-size: 6rem;
+  margin-top: 0;
+}
+h2 {
+  font-size: 6rem;
+  margin-left: 81px;
+}
+h3 {
+  font-size: 3rem;
+  @include fontStyle(5.8rem, 5px);
+  margin: 0;
+}
+h4 {
+  font-size: 3rem;
+  @include fontStyle(5.8rem, 4.3px);
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-left: 1rem;
+}
+h5 {
+  color: white;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.wrapper {
+  width: 90%;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+}
+header {
+  background-image: url(./mindnsoul-assets/home-image-1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+nav {
+  @include fontStyle(3rem, 1px);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 3rem;
+}
+.nav {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.nav li {
+  margin: 0 2rem;
+}
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+.mainPage li:first-child a {
+  color: $marigold;
+}
+.top {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: -1rem;
+  width: 100%;
+}
+.top .imgBox {
+  width: 40%;
+}
+.imgBox img {
+  width: 100%;
+}
+.welcome {
+  width: 60%;
+  padding-left: 3rem;
+}
+.welcome p {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+.newAdv {
+  margin: 0;
+  padding: 10rem 0 8rem 0;
+}
+.newAdv .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 5rem;
+}
+.textContainer p {
+  margin: 0;
+  color: $iceBlue;
+}
+.newAdv img {
+  box-shadow: -1rem 1rem $mudGreen;
+}
+.gallery {
+  background-color: $charcoal;
+  padding: 5rem 0;
+}
+.gallery .wrapper {
+  justify-content: space-around;
+}
+.aboutSection {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 6rem 0;
+}
+.textBox {
+  color: white;
+  width: 50%;
+}
+.fas {
+  background-color: $mudGreen;
+  font-size: 3rem;
+  border-radius: 50%;
+  padding: 1rem;
+  float: left;
+  color: white;
+}
+.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.textBox p {
+  margin-left: 6rem;
+}
+.blogSection {
+  background-color: $charcoal;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  align-items: center;
+}
+.containerTop {
+  margin-top: -1rem;
+  margin-bottom: 3rem;
+}
+.containerBot {
+  margin-top: 3rem;
+  margin-bottom: -1rem;
+}
+.container .textContainer {
+  width: 40%;
+  justify-content: space-between;
+  margin-right: 0;
+}
+.container .textContainer p {
+  width: 70%;
+}
+.containerBot .textContainer {
+  align-items: flex-end;
+}
+.imgFrame {
+  width: 50%;
+}
+.imgFrame img {
+  width: 80%;
+}
+.left-image img {
+  box-shadow: 1rem 1rem $marigold;
+}
+.right-image img {
+  box-shadow: -1rem 1rem $marigold;
+  float: right;
+}
+.banner-image {
+  z-index: 0;
+}
+.centerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0;
+  background-color: #1f0a03;
+  color: $iceBlue;
+}
+.centerContainer p {
+  width: 80%;
+}
+footer {
+  background-color: $charcoal;
+  text-align: center;
+  color: $iceBlue;
+  padding: 1rem;
+}
+button {
+  background-color: $mudGreen;
+  border: none;
+  @include headerFont;
+  color: white;
+  padding: 5px;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+.blogHeader {
+  background-image: url(./mindnsoul-assets/blog-image-1.jpg);
+  background-size: cover;
+  height: 60vh;
+}
+.blogHeader li:nth-child(3) a {
+  color: $marigold;
+}
+.blog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.longBox {
+  margin-top: -40vh;
+  width: 60vw;
+}
+.longBox img {
+  width: calc(100% - 1rem);
+  box-shadow: 1rem 1rem $mudGreen;
+}
+.longContainer {
+  width: 100%;
+  border: 6px solid $mudGreen;
+  border-left: none;
+  border-top: none;
+  color: #fff;
+  padding: 0 81px;
+}
+.longContainer h3 {
+  margin-top: 3rem;
+  margin-bottom: 0;
+  line-height: 3rem;
+}
+.longContainer p:first-of-type {
+  padding-top: 0;
+  margin-top: 0;
+}
+.shortBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 20vw;
+  background-color: $mudGreen;
+  padding-left: 1rem;
+  color: white;
+}
+.shortBox img {
+  align-self: flex-end;
+}
+.shortBox p {
+  line-height: 2.5rem;
+}
+.shortBox li::marker {
+  color: $marigold;
+}
+.commentSection {
+  flex-direction: column;
+  width: 50%;
+  margin: 0;
+  margin-bottom: 8rem;
+  padding-left: 81px;
+}
+.commentSection h3 {
+  color: white;
+}
+.commentBox {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin-bottom: 3rem;
+}
+.commentImg {
+  margin-right: 2rem;
+}
+.commentText p:first-of-type {
+  margin-top: 0;
+  color: $marigold;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.topForm {
+  display: flex;
+}
+input[type="text"],
+input[type="email"] {
+  background-color: #1f0a03;
+  width: 45%;
+  line-height: 3rem;
+  border: none;
+  padding: 0 2rem;
+  border-bottom: 4px solid $marigold;
+  color: white;
+}
+input[type="text"] {
+  margin-right: 10%;
+}
+textarea {
+  margin: 3rem 0;
+  border: 4px solid $marigold;
+  background-color: #1f0a03;
+  height: 200px;
+  color: white;
+  padding: 2rem;
+}
+.contactPage{
+  height: 100vh;
+}
+.contactHeader{
+  background-image: url(./mindnsoul-assets/contact-image-1.jpg);
+  height: 50vh;
+}
+.contactHeader li:last-child a{
+  color: $marigold;
+}
+.contactContent{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contactForm{
+  width: 60%;
+  margin: -30vh 3rem 3rem 3rem;
+}
+.contactForm h2{
+  margin-bottom: 0;
+}
+.contactForm form, .contactForm form input, .contactForm textarea{
+  background-color: $charcoal;
+}
+.contactForm form{
+  padding: 3rem;
+  box-shadow: 1rem 1rem $marigold;
+}
+.contactForm footer{
+  position: absolute;
+    bottom: 0;
+  width: 100vw;
+}
+.addressBox{
+  margin-left: 5rem;
+  color: #fff;
+}
+.iconBox{
+  font-size: 2rem;
+  color: $marigold;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    height: 60vh;
+  }
+  .nav {
+    padding-left: 0;
+  }
+  .top {
+    flex-direction: column;
+  }
+  .top,
+  .newAdv .wrapper,
+  .gallery .wrapper,
+  .container {
+    flex-direction: column;
+  }
+  .textBox {
+    width: 100%;
+  }
+  .imgFrame,
+  .container .textContainer {
+    width: 100%;
+  }
+  .blog{
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .longBox{
+    width: 100%;
+  }
+  .shortBox{
+    width: 100%;
+  }
+  .commentSection{
+    width: 90%;
+  }
+  .contactContent{
+    flex-direction: column;
+  }
+  .contactForm{
+    width: 90%;
+  }
+  .addressBox{
+    width: 50%;
+  }
+  .iconBox{
+    justify-content: space-between;
+  }
+}
