@@ -383,7 +383,7 @@ a:active {
 }
 
 .welcome {
-  width: 60%;
+  width: 100%;
   padding-left: 3rem;
 }
 
@@ -792,7 +792,9 @@ textarea {
   margin-bottom: 0;
 }
 
-.contactForm form, .contactForm form input, .contactForm textarea {
+.contactForm form,
+.contactForm form input,
+.contactForm textarea {
   background-color: #262725;
 }
 
@@ -833,21 +835,29 @@ textarea {
     padding-left: 0;
   }
 
-  .top {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .nav li {
+    margin: 0 1rem;
   }
 
-  .top,
-.newAdv .wrapper,
+  .top {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+  }
+
+  .top .newAdv .wrapper,
 .gallery .wrapper,
 .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .newAdv img {
+    height: 100%;
   }
 
   .textBox {
@@ -899,5 +909,28 @@ textarea {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+@media (max-width: 540px) {
+  .nav li {
+    margin: 0;
+  }
+
+  .top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .newAdv .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }

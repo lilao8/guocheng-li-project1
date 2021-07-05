@@ -99,7 +99,7 @@ a:active {
   width: 100%;
 }
 .welcome {
-  width: 60%;
+  width: 100%;
   padding-left: 3rem;
 }
 .welcome p {
@@ -341,51 +341,52 @@ textarea {
   color: white;
   padding: 2rem;
 }
-.contactPage{
+.contactPage {
   height: 100vh;
 }
-.contactHeader{
+.contactHeader {
   background-image: url(./mindnsoul-assets/contact-image-1.jpg);
   height: 50vh;
 }
-.contactHeader li:last-child a{
+.contactHeader li:last-child a {
   color: $marigold;
 }
-.contactContent{
+.contactContent {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.contactForm{
+.contactForm {
   width: 60%;
   margin: -30vh 3rem 3rem 3rem;
 }
-.contactForm h2{
+.contactForm h2 {
   margin-bottom: 0;
 }
-.contactForm form, .contactForm form input, .contactForm textarea{
+.contactForm form,
+.contactForm form input,
+.contactForm textarea {
   background-color: $charcoal;
 }
-.contactForm form{
+.contactForm form {
   padding: 3rem;
   box-shadow: 1rem 1rem $marigold;
 }
-.contactForm footer{
+.contactForm footer {
   position: absolute;
-    bottom: 0;
+  bottom: 0;
   width: 100vw;
 }
-.addressBox{
+.addressBox {
   margin-left: 5rem;
   color: #fff;
 }
-.iconBox{
+.iconBox {
   font-size: 2rem;
   color: $marigold;
   display: flex;
   justify-content: space-between;
 }
-
 
 @media (max-width: 768px) {
   header {
@@ -394,14 +395,20 @@ textarea {
   .nav {
     padding-left: 0;
   }
-  .top {
-    flex-direction: column;
+  .nav li {
+    margin: 0 1rem;
   }
-  .top,
-  .newAdv .wrapper,
+  .top {
+    flex-direction: row;
+    position: relative;
+  }
+  .top .newAdv .wrapper,
   .gallery .wrapper,
   .container {
     flex-direction: column;
+  }
+  .newAdv img {
+    height: 100%;
   }
   .textBox {
     width: 100%;
@@ -410,29 +417,43 @@ textarea {
   .container .textContainer {
     width: 100%;
   }
-  .blog{
+  .blog {
     flex-direction: column;
     justify-content: space-around;
   }
-  .longBox{
+  .longBox {
     width: 100%;
   }
-  .shortBox{
+  .shortBox {
     width: 100%;
   }
-  .commentSection{
+  .commentSection {
     width: 90%;
   }
-  .contactContent{
+  .contactContent {
     flex-direction: column;
   }
-  .contactForm{
+  .contactForm {
     width: 90%;
   }
-  .addressBox{
+  .addressBox {
     width: 50%;
   }
-  .iconBox{
+  .iconBox {
     justify-content: space-between;
+  }
+}
+@media (max-width: 540px) {
+  .nav li {
+    margin: 0;
+  }
+  .top {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .newAdv .wrapper {
+    flex-direction: column;
   }
 }
