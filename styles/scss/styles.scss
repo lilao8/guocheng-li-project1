@@ -48,7 +48,7 @@ h5 {
   display: flex;
 }
 header {
-  background-image: url(./mindnsoul-assets/home-image-1.jpg);
+  background-image: url(../mindnsoul-assets/home-image-1.jpg);
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -238,7 +238,7 @@ button {
   margin-top: 10px;
 }
 .blogHeader {
-  background-image: url(./mindnsoul-assets/blog-image-1.jpg);
+  background-image: url(../mindnsoul-assets/blog-image-1.jpg);
   background-size: cover;
   height: 60vh;
 }
@@ -348,7 +348,7 @@ textarea {
   height: 100vh;
 }
 .contactHeader {
-  background-image: url(./mindnsoul-assets/contact-image-1.jpg);
+  background-image: url(../mindnsoul-assets/contact-image-1.jpg);
   height: 50vh;
 }
 .contactHeader li:last-child a {
