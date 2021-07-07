@@ -2,7 +2,7 @@
 @import "variables";
 @import "mixins";
 
-body {
+body{
   @include bodyFont();
   font-size: 20px;
   background-color: #1f0a03;
@@ -225,6 +225,9 @@ footer {
   color: $iceBlue;
   padding: 1rem;
 }
+.textContainer a,
+.blogSection a,
+.container a,
 button {
   background-color: $mudGreen;
   border: none;
@@ -255,7 +258,7 @@ button {
   width: calc(100% - 1rem);
   box-shadow: 1rem 1rem $mudGreen;
 }
-.longContainer {
+article {
   width: 100%;
   border: 6px solid $mudGreen;
   border-left: none;
@@ -377,15 +380,17 @@ textarea {
   bottom: 0;
   width: 100vw;
 }
-.addressBox {
+address {
   margin-left: 5rem;
   color: #fff;
 }
-.iconBox {
+.icon {
+  display: flex;
+}
+.iconBox a {
   font-size: 2rem;
   color: $marigold;
-  display: flex;
-  justify-content: space-between;
+  margin-right: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -436,7 +441,7 @@ textarea {
   .contactForm {
     width: 90%;
   }
-  .addressBox {
+  address {
     width: 50%;
   }
   .iconBox {
@@ -445,7 +450,8 @@ textarea {
 }
 @media (max-width: 540px) {
   .nav li {
-    margin: 0;
+    margin: 1rem;
+    flex-direction: column;
   }
   .top {
     flex-direction: column;

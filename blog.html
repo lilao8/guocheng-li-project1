@@ -33,7 +33,7 @@
             src="./styles/mindnsoul-assets/post-image.jpg"
             alt="a guy dressing like a drum(hard to describe this)"
           />
-          <div class="longContainer">
+          <article>
             <h3>Come and discover our space</h3>
             <p>Monday May 5th, 2019 by Saron</p>
             <p>
@@ -69,7 +69,7 @@
               placeat explicabo harum aliquid. Adipisci ipsam tempora aperiam
               alias porro atque nihil maxime molestias.
             </p>
-          </div>
+          </article>
         </div>
         <div class="shortBox">
           <img
@@ -129,10 +129,14 @@
         </div>
         <div>
           <form action="GET">
+            
             <div class="topForm">
-              <input type="text" value="Name"/>
-              <input type="email" value="Email address"/>
+              <label for="textInput"></label>
+              <input id="textInput" type="text" value="Name"/>
+              <label for="emailInput"></label>
+              <input id="emailInput" type="email" value="Email address"/>
             </div>
+            <label for="textarea"></label>
             <textarea name="" id="textarea" cols="30" rows="10">Comment</textarea>
             <button>Post Comment</button>
           </form>

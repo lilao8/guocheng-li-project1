@@ -588,6 +588,9 @@ footer {
   padding: 1rem;
 }
 
+.textContainer a,
+.blogSection a,
+.container a,
 button {
   background-color: #555f02;
   border: none;
@@ -632,7 +635,7 @@ button {
           box-shadow: 1rem 1rem #555f02;
 }
 
-.longContainer {
+article {
   width: 100%;
   border: 6px solid #555f02;
   border-left: none;
@@ -810,20 +813,21 @@ textarea {
   width: 100vw;
 }
 
-.addressBox {
+address {
   margin-left: 5rem;
   color: #fff;
 }
 
-.iconBox {
-  font-size: 2rem;
-  color: #ffc600;
+.icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+.iconBox a {
+  font-size: 2rem;
+  color: #ffc600;
+  margin-right: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -901,7 +905,7 @@ textarea {
     width: 90%;
   }
 
-  .addressBox {
+  address {
     width: 50%;
   }
 
@@ -913,7 +917,11 @@ textarea {
 }
 @media (max-width: 540px) {
   .nav li {
-    margin: 0;
+    margin: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .top {
