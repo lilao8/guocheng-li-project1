@@ -271,7 +271,7 @@ h3 {
 h4 {
   font-size: 3rem;
   line-height: 5.8rem;
-  letter-spacing: 4.3px;
+  letter-spacing: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,6 +329,12 @@ nav {
           align-items: center;
 }
 
+.fa-bars {
+  display: none;
+  color: #fafffe;
+  font-size: 5rem;
+}
+
 .logo {
   font-size: 3rem;
 }
@@ -342,8 +348,6 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .nav li {
@@ -835,12 +839,40 @@ address {
     height: 60vh;
   }
 
-  .nav {
-    padding-left: 0;
+  header .wrapper {
+    margin: 3rem auto;
   }
 
-  .nav li {
-    margin: 0 1rem;
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: none;
+  }
+
+  .fa-bars {
+    display: inline;
+    font-size: 3rem;
+  }
+
+  .fa-bars ul {
+    list-style-type: none;
+    position: absolute;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 2rem;
+    font-family: "Lato", sans-serif;
+  }
+
+  .fa-bars ul li::marker {
+    z-index: 99999;
   }
 
   .top {
@@ -916,12 +948,8 @@ address {
   }
 }
 @media (max-width: 540px) {
-  .nav li {
-    margin: 1rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .newAdv {
+    padding-top: 2rem;
   }
 
   .top {
@@ -931,7 +959,7 @@ address {
             flex-direction: column;
   }
 
-  h1 {
+  h1, h2 {
     font-size: 3rem;
   }
 
