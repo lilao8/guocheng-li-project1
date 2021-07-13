@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Dokdo&family=Lato&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/5f3c893a13.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="styles/styles.css" />
     <title>Mindn'Soul Blog</title>
   </head>
@@ -23,6 +27,7 @@
           <li><a href="blog.html">BLOG</a></li>
           <li><a href="contact.html">CONTACT</a></li>
         </ul>
+        <i class="fa fa-bars"></i>
       </nav>
     </header>
     <main>
@@ -30,10 +35,10 @@
         <div class="longBox">
           <h2>Blog</h2>
           <img
-            src="./styles/mindnsoul-assets/post-image.jpg"
+            src="mindnsoul-assets/post-image.jpg"
             alt="a guy dressing like a drum(hard to describe this)"
           />
-          <div class="longContainer">
+          <article>
             <h3>Come and discover our space</h3>
             <p>Monday May 5th, 2019 by Saron</p>
             <p>
@@ -69,11 +74,11 @@
               placeat explicabo harum aliquid. Adipisci ipsam tempora aperiam
               alias porro atque nihil maxime molestias.
             </p>
-          </div>
+          </article>
         </div>
         <div class="shortBox">
           <img
-            src="./styles/mindnsoul-assets/sidebar-image.jpg"
+            src="mindnsoul-assets/sidebar-image.jpg"
             alt="a statue made of stones"
           />
           <h5>our mission</h5>
@@ -96,7 +101,7 @@
         <div class="commentBox">
           <div class="commentImg">
             <img
-              src="./styles/mindnsoul-assets/comment-image.jpg"
+              src="mindnsoul-assets/comment-image.jpg"
               alt="profile picture is a man in black shirt"
             />
           </div>
@@ -113,7 +118,7 @@
         <div class="commentBox">
           <div class="commentImg">
             <img
-              src="./styles/mindnsoul-assets/comment-image2.jpg"
+              src="mindnsoul-assets/comment-image2.jpg"
               alt="profile picture is image with two zebras"
             />
           </div>
@@ -130,17 +135,21 @@
         <div>
           <form action="GET">
             <div class="topForm">
-              <input type="text" value="Name"/>
-              <input type="email" value="Email address"/>
+              <label for="textInput"></label>
+              <input id="textInput" type="text" value="Name" />
+              <label for="emailInput"></label>
+              <input id="emailInput" type="email" value="Email address" />
             </div>
-            <textarea name="" id="textarea" cols="30" rows="10">Comment</textarea>
+            <label for="textarea"></label>
+            <textarea name="" id="textarea" cols="30" rows="10">
+Comment</textarea
+            >
             <button>Post Comment</button>
           </form>
         </div>
       </section>
     </main>
-    <footer>
-      Copyright © 2019 HackerYou
-    </footer>
+    <footer>Copyright © 2019 HackerYou</footer>
+    <script src="app.js"></script>
   </body>
 </html>

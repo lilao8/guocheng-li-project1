@@ -30,7 +30,7 @@ h3 {
 }
 h4 {
   font-size: 3rem;
-  @include fontStyle(5.8rem, 4.3px);
+  @include fontStyle(5.8rem, auto);
   display: flex;
   align-items: center;
   margin: 0;
@@ -48,7 +48,7 @@ h5 {
   display: flex;
 }
 header {
-  background-image: url(./mindnsoul-assets/home-image-1.jpg);
+  background-image: url(../mindnsoul-assets/home-image-1.jpg);
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -63,6 +63,11 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+.fa-bars {
+  display: none;
+  color: $iceBlue;
+  font-size: 5rem;
+}
 .logo {
   font-size: 3rem;
 }
@@ -70,7 +75,6 @@ nav {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 .nav li {
   margin: 0 2rem;
@@ -225,6 +229,9 @@ footer {
   color: $iceBlue;
   padding: 1rem;
 }
+.textContainer a,
+.blogSection a,
+.container a,
 button {
   background-color: $mudGreen;
   border: none;
@@ -235,7 +242,7 @@ button {
   margin-top: 10px;
 }
 .blogHeader {
-  background-image: url(./mindnsoul-assets/blog-image-1.jpg);
+  background-image: url(../mindnsoul-assets/blog-image-1.jpg);
   background-size: cover;
   height: 60vh;
 }
@@ -255,7 +262,7 @@ button {
   width: calc(100% - 1rem);
   box-shadow: 1rem 1rem $mudGreen;
 }
-.longContainer {
+article {
   width: 100%;
   border: 6px solid $mudGreen;
   border-left: none;
@@ -345,7 +352,7 @@ textarea {
   height: 100vh;
 }
 .contactHeader {
-  background-image: url(./mindnsoul-assets/contact-image-1.jpg);
+  background-image: url(../mindnsoul-assets/contact-image-1.jpg);
   height: 50vh;
 }
 .contactHeader li:last-child a {
@@ -377,26 +384,46 @@ textarea {
   bottom: 0;
   width: 100vw;
 }
-.addressBox {
+address {
   margin-left: 5rem;
   color: #fff;
 }
-.iconBox {
+.icon {
+  display: flex;
+}
+.iconBox a {
   font-size: 2rem;
   color: $marigold;
-  display: flex;
-  justify-content: space-between;
+  margin-right: 1rem;
 }
 
 @media (max-width: 768px) {
   header {
     height: 60vh;
   }
-  .nav {
-    padding-left: 0;
+  header .wrapper {
+    margin: 3rem auto;
   }
-  .nav li {
-    margin: 0 1rem;
+  .nav {
+    flex-direction: column;
+    display: none;
+  }
+  .fa-bars {
+    display: inline;
+    font-size: 3rem;
+  }
+  .fa-bars ul {
+    list-style-type: none;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    @include bodyFont();
+    
+  }
+  .fa-bars ul li::marker{
+    z-index: 99999;
   }
   .top {
     flex-direction: row;
@@ -436,7 +463,7 @@ textarea {
   .contactForm {
     width: 90%;
   }
-  .addressBox {
+  address {
     width: 50%;
   }
   .iconBox {
@@ -444,13 +471,13 @@ textarea {
   }
 }
 @media (max-width: 540px) {
-  .nav li {
-    margin: 0;
+  .newAdv {
+    padding-top: 2rem;
   }
   .top {
     flex-direction: column;
   }
-  h1 {
+  h1 ,h2{
     font-size: 3rem;
   }
   .newAdv .wrapper {
